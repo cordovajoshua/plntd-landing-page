@@ -1,0 +1,261 @@
+:root {
+    --border-color: #faceb1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #542a04;
+    text-align: center;
+}
+
+/* GLOBAL */
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #542a04;    
+}
+
+a:hover {
+    border-bottom: 2px solid black;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding-bottom: 10px;
+}
+
+#header-img {
+    max-width: 100px;
+    align-self: center;
+}
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav-bar {
+    margin-top: 15px;
+}
+
+#nav-bar ul{
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.nav-link {
+    padding: 0 1rem;
+    font-size: 1.2rem;
+}
+
+video {
+    display: none;
+}
+
+/* showcase */
+#showcase {
+    width: 100%;
+    min-height: 500px;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/images/showcase.jpg') no-repeat center center/cover;
+    color: lemonchiffon;
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+#showcase p {
+    font-size: 2rem;
+}
+
+/* best sellers */
+#best-sellers {
+    text-align: center;
+    padding-bottom: 60px;
+    border-bottom: 10px solid var(--border-color);
+    margin-bottom: 50px;
+}
+
+#best-sellers .items {
+    display: inline-flex;
+    box-sizing: border-box;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#best-sellers img {
+    max-width: 20%;
+    height: auto;
+}
+
+#best-sellers h2 {
+    font-weight: normal;
+    margin-bottom: 60px;
+    font-size: 2rem;
+}
+
+/* features */
+#features {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 10px solid var(--border-color);
+    font-size: 1.2rem;
+}
+
+#features .container {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+
+#features .container div {
+    max-width: 20%;
+}
+
+i {
+    margin-bottom: 20px;
+}
+
+/* newsletter */
+#newsletter {
+    border-bottom: 10px solid var(--border-color);
+    padding-bottom: 50px;
+}
+
+#newsletter h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+}
+
+#newsletter .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#form input[type="submit"] {
+    background-color: #542a04;
+    color: white;   
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+
+#form input[type="email"] {
+    padding: 10px 20px;
+    border: 2px solid #542a04;
+    font-size: 1.2rem;
+}
+
+/* aboutme */
+#about-me {
+    margin-top: 50px;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+#about-me .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#about-me .container .me {
+    display: flex;
+
+}
+
+#about-me img {
+    padding-right: 15px;
+}
+
+blockquote {
+    font-size: 1.3rem;
+    font-style: italic;
+    text-align: center;
+    padding-top: 20px;  
+    padding-left: 100px;
+}
+
+/* footer */
+footer {
+    padding: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: var(--border-color);
+    color: #542a04;
+}
+
+/* media queries */
+@media(max-width: 768px) {
+    #header .container {
+        flex-direction: column;
+    }
+    header {
+        position: static;
+        margin-bottom: 30px;
+    }
+
+    #best-sellers .container {
+        width: 100%;
+    }
+    #best-sellers .container .items {
+        justify-content: center;
+    }   
+    #best-sellers img {
+        max-width: 20%;
+        height: auto;
+    }
+
+    #features .container div {
+        max-width: 100%;
+        padding-right: 20px;
+    }
+
+    #newsletter .container {
+        flex-direction: column;
+    }
+
+    #newsletter h2 {
+        margin-bottom: 15px;
+    }
+
+    #newsletter input[type="email"] {
+        margin-bottom: 15px;
+    }
+
+    blockquote {
+        padding-top: 5px;
+    }
+}
+
+@media(max-width: 1300px) {
+    #about-me img {
+        display: none;
+    }
+}

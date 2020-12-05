@@ -212,13 +212,21 @@ footer {
 }
 
 /* media queries */
-@media(max-width: 768px) {
+@media(max-width: 500px) {
     #header .container {
         flex-direction: column;
     }
     header {
         position: static;
         margin-bottom: 30px;
+    }
+
+    #showcase h1 {
+        font-size: 3rem;
+    }
+
+    #showcase p {
+        font-size: 1.5rem;
     }
 
     #best-sellers .container {
@@ -228,13 +236,26 @@ footer {
         justify-content: center;
     }   
     #best-sellers img {
-        max-width: 20%;
+        max-width: 50%;
         height: auto;
+    }
+    img:last-child {
+        display: none;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+    }
+
+
+    #features .container {
+        flex-direction: column;
     }
 
     #features .container div {
         max-width: 100%;
         padding-right: 20px;
+        padding-bottom: 2.5rem;
     }
 
     #newsletter .container {
@@ -251,6 +272,10 @@ footer {
 
     blockquote {
         padding-top: 5px;
+    }
+
+    #about-me {
+        display: none;
     }
 }
 

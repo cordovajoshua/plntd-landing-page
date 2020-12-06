@@ -109,7 +109,7 @@ video {
 
 #best-sellers img {
     max-width: 20%;
-    height: auto;
+    max-height: 50%;
 }
 
 #best-sellers h2 {
@@ -212,7 +212,16 @@ footer {
 }
 
 /* media queries */
-@media(max-width: 500px) {
+@media(max-width: 400px) {
+    #nav-bar ul {
+        flex-direction: column;
+    }
+    #nav-bar ul li {
+        padding-bottom: 1rem;
+    }
+}
+
+@media(max-width: 768px) {
     #header .container {
         flex-direction: column;
     }
@@ -266,7 +275,7 @@ footer {
         margin-bottom: 15px;
     }
 
-    #newsletter input[type="email"] {
+    #newsletter #email {
         margin-bottom: 15px;
     }
 
@@ -282,5 +291,9 @@ footer {
 @media(max-width: 1300px) {
     #about-me img {
         display: none;
+    }
+
+    #newsletter #email {
+        margin-bottom: 1rem;
     }
 }
